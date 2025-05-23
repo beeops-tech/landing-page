@@ -1,0 +1,103 @@
+
+---
+import { Presentation, Calendar, TrendingUp, Users } from '@lucide/astro';
+
+const solutions = [
+    {
+        icon: Presentation,
+        title: 'Réunions de direction',
+        description: 'Transformez les présentations en salle de conseil avec des tableaux de bord interactifs qui engagent les parties prenantes et facilitent la prise de décision.',
+        features: ['Suivi des KPI en temps réel', 'Graphiques interactifs', 'Annotations collaboratives'],
+        image: '📊'
+    },
+    {
+        icon: Calendar,
+        title: 'Événements d\'entreprise',
+        description: 'Créez des expériences mémorables lors de conférences, ateliers et événements d\'entreprise avec des affichages visuels dynamiques.',
+        features: ['Intégration de sondages en direct', 'Flux de réseaux sociaux', 'Outils d\'engagement du public'],
+        image: '🎯'
+    },
+    {
+        icon: TrendingUp,
+        title: 'Ventes & Marketing',
+        description: 'Boostez vos présentations commerciales et campagnes marketing avec des visualisations de données percutantes.',
+        features: ['Métriques de performance', 'Suivi des campagnes', 'Visualisation du ROI'],
+        image: '📈'
+    },
+    {
+        icon: Users,
+        title: 'Collaboration d\'équipe',
+        description: 'Améliorez la productivité de l\'équipe avec des tableaux de bord partagés qui gardent tout le monde aligné et informé.',
+        features: ['Suivi de projet', 'Métriques d\'équipe', 'Visualisation de la progression'],
+        image: '🤝'
+    }
+];
+---
+
+<section id="solutions" class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-inter font-bold text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
+        Parfait pour chaque
+        <span class="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent"> scénario</span>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      Que vous dirigiez une réunion de direction, organisiez un événement ou collaboriez avec votre équipe,
+      BeeOps s'adapte à vos besoins et à votre contexte uniques.
+    </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      {solutions.map((solution, index) => (
+        <div class="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 bg-white rounded-lg">
+          <div class="p-0">
+            <div class="relative">
+              <!-- Header with gradient -->
+              <div class="bg-gradient-to-br from-yellow-400/10 to-amber-500/10 p-8">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <solution.icon class="h-8 w-8 text-black" />
+                    </div>
+                    <div>
+                      <h3 class="font-inter font-bold text-xl text-black mb-2">
+                        {solution.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="text-4xl opacity-20 group-hover:opacity-40 transition-opacity">
+                    {solution.image}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-8">
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  {solution.description}
+                </p>
+
+                <div>
+                  <h4 class="font-semibold text-black mb-3">Fonctionnalités clés:</h4>
+                  <ul class="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
+                      <li class="flex items-center text-gray-600">
+                        <div class="w-2 h-2 bg-yellow-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                  <button class="text-amber-500 font-semibold hover:text-yellow-400 transition-colors group-hover:translate-x-2 transform duration-300">
+                    En savoir plus →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

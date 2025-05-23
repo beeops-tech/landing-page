@@ -1,0 +1,78 @@
+
+---
+import { Monitor, Users, Zap, BarChart3, Globe, Settings } from '@lucide/astro';
+
+const features = [
+    {
+        icon: Monitor,
+        title: 'Affichages dynamiques',
+        description: 'Créez des affichages visuels époustouflants qui s’adaptent en temps réel à vos données et aux besoins de votre audience.',
+        color: 'from-yellow-400 to-amber-500'
+    },
+    {
+        icon: Users,
+        title: 'Intégration en réunion',
+        description: 'Intégrez facilement des tableaux de bord interactifs à vos réunions pour une meilleure collaboration.',
+        color: 'from-amber-500 to-amber-400'
+    },
+    {
+        icon: Zap,
+        title: 'Mises à jour en temps réel',
+        description: 'Voyez vos données prendre vie grâce aux mises à jour instantanées et aux fonctionnalités de collaboration en direct.',
+        color: 'from-amber-400 to-yellow-400'
+    },
+    {
+        icon: BarChart3,
+        title: 'Tableaux de bord événementiels',
+        description: 'Animez vos événements avec des tableaux de bord captivants qui informent et engagent votre public.',
+        color: 'from-yellow-400 to-amber-500'
+    },
+    {
+        icon: Globe,
+        title: 'Accès universel',
+        description: 'Accédez à vos tableaux de bord partout, à tout moment et sur n’importe quel appareil grâce à notre plateforme cloud.',
+        color: 'from-amber-500 to-amber-400'
+    },
+    {
+        icon: Settings,
+        title: 'Personnalisation facile',
+        description: 'Créez et personnalisez vos tableaux de bord avec notre interface intuitive de glisser-déposer.',
+        color: 'from-amber-400 to-yellow-400'
+    }
+];
+---
+
+<section id="features" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-inter font-bold text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
+        Pourquoi choisir 
+        <span class="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent"> BeeOps</span>?
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Découvrez le futur des tableaux de bord interactifs grâce à notre suite complète de fonctionnalités conçues pour transformer votre façon de présenter et d'interagir avec les données.
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature, index) => (
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+            <feature.icon class="h-8 w-8 text-black" />
+          </div>
+          
+          <h3 class="font-inter font-bold text-xl text-black mb-4 group-hover:text-amber-500 transition-colors">
+            {feature.title}
+          </h3>
+          
+          <p class="text-gray-600 leading-relaxed">
+            {feature.description}
+          </p>
+          
+          <div class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="w-12 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

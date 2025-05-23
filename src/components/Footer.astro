@@ -1,0 +1,68 @@
+---
+import { Twitter, Linkedin, Mail, Github } from '@lucide/astro';
+---
+
+<footer class="bg-black text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg flex items-center justify-center">
+            <span class="text-bee-black font-bold text-lg">🐝</span>
+          </div>
+          <span class="font-inter font-bold text-xl">BeeOps</span>
+        </div>
+        <p class="text-white/70 mb-6">
+          Créer l'avenir des tableaux de bord interactifs, une ruche à la fois.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white/70 hover:text-yellow-400 transition-colors">
+            <Twitter size={20} />
+          </a>
+          <a href="#" class="text-white/70 hover:text-yellow-400 transition-colors">
+            <Linkedin size={20} />
+          </a>
+          <a href="#" class="text-white/70 hover:text-yellow-400 transition-colors">
+            <Github size={20} />
+          </a>
+          <a href="#" class="text-white/70 hover:text-yellow-400 transition-colors">
+            <Mail size={20} />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-white mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-white/70 hover:text-white transition-colors">Fonctionnalités</a></li>
+          <li><a href="#" class="text-white/70 hover:text-white transition-colors">Tarifs</a></li>
+          <li><a href="#" class="text-white/70 hover:text-white transition-colors">Intégrations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-white mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-white/70 hover:text-white transition-colors">Notre entreprise</a></li>
+          <li><a href="#" class="text-white/70 hover:text-white transition-colors">Blog</a></li>
+          <li><a href="#" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-white/50 text-sm">
+        © 2025 BeeOps. Tous droits réservés.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="text-white/50 hover:text-white text-sm transition-colors">
+          Politique de confidentialité
+        </a>
+        <a href="#" class="text-white/50 hover:text-white text-sm transition-colors">
+            Mentions légales
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
